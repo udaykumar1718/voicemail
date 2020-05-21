@@ -1,0 +1,217 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="sign up with voice page"
+    tools:context="com.example.abanoub.voicebasedemailsystem.SignUp1Activity">
+
+    <ImageView
+        android:id="@+id/formBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/blur2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4d000000" />
+    <!--100% — FF--> <!--95% — F2--> <!--90% — E6--> <!--85% — D9-->
+    <!--80% — CC--> <!--75% — BF--> <!--70% — B3--> <!--65% — A6-->
+    <!--60% — 99--> <!--55% — 8C--> <!--50% — 80--> <!--45% — 73-->
+    <!--40% — 66--> <!--35% — 59--> <!--30% — 4D--> <!--25% — 40-->
+    <!--20% — 33--> <!--15% — 26--> <!--10% — 1A--> <!--5% — 0D-->
+    <!--0% — 00-->
+
+    <ImageView
+        android:id="@+id/formLogo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="app logo"
+        android:padding="50dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/vmaillogo" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/formLogo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:elevation="6dp"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:contentDescription="enter your full name here"
+                android:drawableLeft="@mipmap/person_icon"
+                android:drawablePadding="5dp"
+                android:hint="Full Name"
+                android:paddingStart="10dp"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:orientation="horizontal">
+
+                <AutoCompleteTextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/rounded_white"
+                    android:contentDescription="enter your username here"
+                    android:drawableLeft="@mipmap/ic_user_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="Username      "
+                    android:paddingStart="10dp"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/domain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:hint="\@vmail.com"
+                        android:textColorHint="#000"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <AutoCompleteTextView
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:contentDescription="enter your password here"
+                android:drawableLeft="@mipmap/ic_pass_icon"
+                android:drawablePadding="5dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="16sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/rounded_white"
+                android:contentDescription="enter your password again here to confirm it"
+                android:drawableLeft="@mipmap/ic_confirm_icon"
+                android:drawablePadding="5dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="secret question"
+                    android:text="Secret Question"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/secretQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_white"
+                    android:contentDescription="your secret question"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="7dp"
+                    android:text="What is the name of the city you born?"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="secret answer"
+                    android:text="Secret Answer"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/secretAnswerED"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_white"
+                    android:contentDescription="enter your secret answer here"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="7dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/signup_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/register_button"
+                android:contentDescription="sign up button"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="SIGN UP"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/login_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:contentDescription="sign in link. click to go to sign in page"
+        android:gravity="center"
+        android:text="Already a member? Sign in"
+        android:textColor="@color/white" />
+</RelativeLayout>
+
